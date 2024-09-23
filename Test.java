@@ -91,7 +91,7 @@ class PlayerInfo {
 
     class Battle {
         public void startBattle(PlayerInfo player, EnemyInfo enemy) {
-            Scanner scanner = new Scanner(System.in); // Moved scanner initialization here
+            Scanner scanner = new Scanner(System.in); 
             
             while (enemy.getEnemyHP() > 0 && player.getPlayerHP() > 0) {
                 System.out.println("Player's turn!");
@@ -102,19 +102,19 @@ class PlayerInfo {
                 String choice = scanner.nextLine();
     
                 if (choice.equalsIgnoreCase("A")) {
-                    // Attack: subtract player's ATK from enemy's HP
+                    //calc damage
                     int newEnemyHP = enemy.getEnemyHP() - player.getPlayerATK();
-                    enemy.setEnemyHP(newEnemyHP); // Enemy HP is updated
+                    enemy.setEnemyHP(newEnemyHP); 
     
                     System.out.println("You attacked the enemy! Enemy HP is now: " + newEnemyHP);
                 }
     
-                // You can add other actions like Defend or Wild Attack here
+                //future options here
                 if (choice.equalsIgnoreCase("D")) {
                     int 
                 }
             }
-            scanner.close(); // Close the scanner when done
+            scanner.close(); 
         }
     }
     
